@@ -84,6 +84,20 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/q1',
+    component: Layout,
+    redirect: '/q1/index',
+    name: '问题1',
+    meta: {
+      title: '问题1',
+      icon: 'excel'
+    },
+    children: [
+      { path: 'index', component: () => import('@/views/q1/index'), name: '问题1-落点计算', meta: { title: '问题1-落点计算' }},
+      { path: 'reverse', component: () => import('@/views/q1/reverse'), name: '问题1-概率估计', meta: { title: '问题1-概率估计' }}
+    ]
+  },
+  {
     path: '/documentation',
     component: Layout,
     children: [
